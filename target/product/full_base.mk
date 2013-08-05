@@ -44,6 +44,9 @@ PRODUCT_PROPERTY_OVERRIDES := \
 # Put en_US first in the list, so make it default.
 PRODUCT_LOCALES := en_US
 
+# Get all flaming monkey additions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/flaming_monkey.mk)
+
 # Get some sounds
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
 
