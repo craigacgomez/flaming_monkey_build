@@ -37,18 +37,13 @@ PRODUCT_PACKAGES += \
 
 # Additional settings used in all AOSP builds
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.com.android.dateformat=MM-dd-yyyy \
-    ro.config.ringtone=Ring_Synth_04.ogg \
-    ro.config.notification_sound=pixiedust.ogg
+    ro.com.android.dateformat=MM-dd-yyyy
 
 # Put en_US first in the list, so make it default.
 PRODUCT_LOCALES := en_US
 
-# Get all flaming monkey additions
-$(call inherit-product, $(SRC_TARGET_DIR)/product/flaming_monkey.mk)
-
 # Get some sounds
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage9.mk)
 
 # Get the TTS language packs
 $(call inherit-product-if-exists, external/svox/pico/lang/all_pico_languages.mk)
@@ -58,3 +53,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
 
 # Get everything else from the parent package
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
+
+# Get all flaming monkey additions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/flaming_monkey.mk)
