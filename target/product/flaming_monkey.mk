@@ -30,3 +30,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Girtab.ogg \
     ro.config.notification_sound=Adara.ogg \
     ro.config.alarm_alert=Helium.ogg
+
+# Get all flaming monkey additions
+$(call inherit-product-if-exists, vendor/flaming_monkey/flaming_monkey-vendor.mk)
