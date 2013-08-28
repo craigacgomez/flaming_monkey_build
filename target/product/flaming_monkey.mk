@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     Development \
     LockClock \
+    PerformanceControl \
     Superuser \
     WebView \
     e2fsck \
