@@ -8,6 +8,7 @@ PRODUCT_PACKAGES += \
     Development \
     LockClock \
     PerformanceControl \
+    QSCP \
     Superuser \
     WebView \
     e2fsck \
